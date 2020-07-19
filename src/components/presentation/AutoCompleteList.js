@@ -8,10 +8,16 @@ const AutoCompleteList = (props) =>{
             {props.suggestions.length > 0 && 
                 <ul className="autocomplete-list">
                     {props.suggestions.map((suggestion, index)=>
-                        <li data-testid={index} key={index} onClick={(e)=>props.suggestionOnClick(e, suggestion)}>
-                            <span className="highlight">{suggestion.display_name.substr(0,highlightWordLength)}</span>
-                            <span>{suggestion.display_name.substr(highlightWordLength, suggestion.display_name.length)}</span>
-                        </li>
+                        {
+                            const highlightedString = suggestion.display_name.substr(0,highlightWordLength);
+                            const normalString = suggestion.display_name.substr(highlightWordLength, suggestion.display_name.length)
+                            return (
+                                <li data-testid={index} key={index} onClick={(e)=>props.suggestionOnClick(e, suggestion)}>
+                                    <span className="highlight">{highlightedString}</span>
+                                    <span>{normalString}</span>
+                                </li>
+                            )
+                        }
                     )}
                 </ul>
             }

@@ -79,7 +79,7 @@ export default class KhojApp extends Component{
     }
 
     handlePillDelete = (suggestionData) => {
-        
+        this.selectedSuggestionsSet.delete(suggestionData.id);
         let selectedSuggestions = this.state.selectedSuggestions.filter(suggestion => suggestion.id !== suggestionData.id);
         if(selectedSuggestions.length <=5) {
             this.nameInput.current.disabled = false;
