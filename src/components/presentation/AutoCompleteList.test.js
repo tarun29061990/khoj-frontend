@@ -37,31 +37,8 @@ it('renders with data', () => {
     }
 
     act(() => {
-        render(<AutoCompleteList suggestions={mockData} suggestionOnClick={dummyClickFunction}/>, container)
+        render(<AutoCompleteList inputValueLen={2} suggestions={mockData} suggestionOnClick={dummyClickFunction}/>, container)
     });
 
     expect(container.textContent).toBe("AmericaAfrica")
 });
-
-// it('adds a pill in input field', () => {
-//     const mockData = [
-//         {
-//             'display_name': 'America'
-//         },
-//         {
-//             'display_name': 'Africa'
-//         }
-//     ]
-
-//     const dummyClickFunction = () => {
-//         return
-//     }
-
-//     act(() => {
-//         render(<AutoCompleteList suggestions={mockData} suggestionOnClick={dummyClickFunction}/>, container)
-//     });
-    
-//     const li = document.querySelector("[data-testid='0']");
-//     fireEvent.click(li);
-    
-// });
