@@ -35,5 +35,16 @@ src folder contains presentation and container components. Container components 
 
 **src/presentation/AutoCompleteList.js** - Its a autocomplete list that comes when user types something in the input field.
 
+## Assumptions
+1. Right now User can see atmost 10 results. In order to see more then change the count query parameter while calling getLocations api.
+2. Same location cannot be added twice as a pill in the input.
+
+## Project Specification
+1. You should be able to type and see an auto-complete of matching locations in sorted order.
+2. You should be able tp select a location and it should be added to the field as a pill.
+3. You can click outside the autocomplete and it should close the autocomplete field.
+4. You can delete the pills by clicking on the 'x'.
+5. You won't be able to add more than 5 locations.
+
 ## Who do I talk to? 
 Tarun Chaudhary (http://curioustechie.in)
