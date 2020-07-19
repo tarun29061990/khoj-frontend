@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +35,59 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.auto-complete{
+  position: absolute;
+  top:15%;
+  width: 400px;
+  border-radius: 15px;
+  display: flex;
+  padding: 5px;
+  border: 1px solid #ccc;
+  flex-wrap: wrap;
+}
+
+.auto-complete:focus{
+  outline: none;
+}
+.auto-complete .pill-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.auto-complete input{
+  outline: none;
+  border: none;
+  font-size: 17px;
+}
+
+.autocomplete-list{
+  position: absolute;
+  top: 26%;
+  background:#fff;
+  width: 400px;
+  font-size: 22px;
+  color: black;
+    /* text-decoration: none; */
+  list-style: none;
+  text-align: left;
+  margin-left: 5px;
+  z-index: 2;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  box-shadow: 0 1px 9px 2px #ccc;
+}
+
+.autocomplete-list li{
+  padding: 10px;
+  cursor: pointer;
+}
+
+.autocomplete-list li:hover{
+  background: #D6E8F4;
+}
+
+.autocomplete-list .highlight{
+  font-weight: 600;
 }
